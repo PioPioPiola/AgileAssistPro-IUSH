@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AgileAssistPro</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">AgileAssistPro</h1>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-4 offset-sm-4">
+            <form method="post" action="~/Login">
+                <div class="mb-3">
+                    <label for="InputEmail1" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" name="CorreoIngreso" required>
+                    <!--CorreoIngreso es como llamaré el campo donde se ingresará el correo, lo mismo con contraseña-->
+                </div>
+                <div class="mb-3">
+                    <label for="InputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" name="Contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

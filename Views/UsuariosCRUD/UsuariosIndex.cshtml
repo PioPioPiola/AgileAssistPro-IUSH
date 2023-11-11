@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AgileAssistPro_IUSH.Models.Usuarios>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+<!--VISTA DE USUAIOS, CON TABLA OPERACIONES CRUD-->
+<div style="display: flex;
+    justify-content: space-between;
+    align-items: center; color:#294E7F">
+
+
+    <h1>@ViewData["Title"]</h1>
+
+
+    <a asp-action="Create" class="btn btn-success">Crear @ViewData[" Title "]</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCurso)
+            </th>
+            <th><b>Acciones</b></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+                @Html.DisplayFor(modelItem => item.IdCurso)
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalle</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-info">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
