@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Usuario\Desktop\AgileAssistPro-IUSH\AgileAssistPro-IUSH
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Acceso/Acceso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXEFjY2Vzby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Home/Asistencia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBc2lzdGVuY2lhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

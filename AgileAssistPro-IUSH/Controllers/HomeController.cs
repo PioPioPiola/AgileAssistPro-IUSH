@@ -1,8 +1,10 @@
 ﻿using AgileAssistPro_IUSH.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AgileAssistPro_IUSH.Controllers
+
 {
     public class HomeController : Controller
     {
@@ -18,10 +20,13 @@ namespace AgileAssistPro_IUSH.Controllers
             return View();
         }
 
+        [Authorize(Roles ="Admin")]
         public IActionResult Usuarios()
         {
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Qr()
         {
             return View();
