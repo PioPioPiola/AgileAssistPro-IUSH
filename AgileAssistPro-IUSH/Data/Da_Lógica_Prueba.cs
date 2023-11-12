@@ -7,10 +7,10 @@ namespace AgileAssistPro_IUSH.Data
         {
             return new List<Usuarios>
             {
-                new Usuarios{Id = 1000872959, Nombre="Alejandra Bedoya",Correo="Admin@gmail.com", IdCurso="N/A", Hora="N/A", Rol= new string[]{"Admin"}},
-                new Usuarios{Id = 1000872958, Nombre="Juan Bedoya",Correo="Docente@gmail.com", IdCurso="Matemáticas",Hora="7:00", Rol= new string[]{"Docente"}},
-                new Usuarios{Id = 1000872957, Nombre="Juan Gil",Correo="Estudiante@gmail.com", IdCurso="Matemáticas", Hora="7:00", Rol= new string[]{"Estudiante"}},
-                new Usuarios{Id = 202320033, Nombre="Prueba",Correo="Prueba@gmail.com", IdCurso="Inglés",Hora="8:00", Rol= new string[]{"Estudiante"}},
+                new Usuarios{Id = 1000872959, Nombre="Alejandra Bedoya",Correo="Admin@gmail.com", IdCurso="N/A", Hora="N/A", Rol= "Admin"},
+                new Usuarios{Id = 1000872958, Nombre="Juan Bedoya",Correo="Docente@gmail.com", IdCurso="Matemáticas",Hora="7:00", Rol= "Docente"},
+                new Usuarios{Id = 1000872957, Nombre="Juan Gil",Correo="Estudiante@gmail.com", IdCurso="Matemáticas", Hora="7:00", Rol="Estudiante"},
+                new Usuarios{Id = 202320033, Nombre="Prueba",Correo="Prueba@gmail.com", IdCurso="Inglés",Hora="8:00", Rol= "Estudiante"},
                 //Validar como sería los tipos de usuarios
             };
         }

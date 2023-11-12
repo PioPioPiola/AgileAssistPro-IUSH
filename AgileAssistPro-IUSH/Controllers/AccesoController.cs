@@ -30,13 +30,9 @@ namespace AgileAssistPro_IUSH.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, usuarioPrueba.Nombre),
-                    new Claim("Correo", usuarioPrueba.Correo)
+                    new Claim("Correo", usuarioPrueba.Correo),
+                    new Claim(ClaimTypes.Role, usuarioPrueba.Rol)
                 };
-
-                foreach(string rol in usuarioPrueba.Rol)
-                {
-                    claims.Add(new Claim(ClaimTypes.Role, rol));
-                }
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
