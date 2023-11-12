@@ -19,6 +19,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     option.AccessDeniedPath = "/Home/Error";
     //Para esta, cuando cree el espacio de Privacy, irá una foto de nosotros como policías diciendo que alto ahí jóven
 });
+builder.Services.AddScoped<Da_Logica>();
 
 var app = builder.Build();
 

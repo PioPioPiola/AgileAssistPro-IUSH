@@ -9,6 +9,12 @@ namespace AgileAssistPro_IUSH.Controllers
 {
     public class AccesoController : Controller
     {
+        private readonly Da_Logica _da_Logica;
+
+        public AccesoController(Da_Logica da_Logica)
+        {
+            _da_Logica = da_Logica;
+        }
         public IActionResult Acceso()
         {
             return View();
@@ -19,19 +25,15 @@ namespace AgileAssistPro_IUSH.Controllers
         
         public async Task <IActionResult> Acceso(Usuarios _usuarios)
         {
-            Da_Lógica_Prueba _da_usuario_prueba = new Da_Lógica_Prueba();
-            //Hacer esto mismo, pero con la BD.
-
-            var usuarioPrueba = _da_usuario_prueba.ValidarUsuarioPrueba(_usuarios.Correo, _usuarios.Id);
-            //Usuario prueba cambiarlo por LoginUser == usuario encontrado
-            if (usuarioPrueba != null)
-            {
-                //Creación cookie de autorización
-                var claims = new List<Claim>
+            var LoginUser = await _da_Logica.ValidarUsuario(_usuarios.Correo, _usuarios.Id);
+            //Usuario prueba cambiarlo por LoginUser == usuario encontrado. Donde diga usuarioPrueba
+            if (LoginUser != null)
+            {//Creación cookie de autorización
+                  var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, usuarioPrueba.Nombre),
-                    new Claim("Correo", usuarioPrueba.Correo),
-                    new Claim(ClaimTypes.Role, usuarioPrueba.Rol)
+                    new Claim(ClaimTypes.Name, LoginUser.Nombre),
+                    new Claim("Correo", LoginUser.Correo),
+                    new Claim(ClaimTypes.Role, LoginUser.Rol)
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
