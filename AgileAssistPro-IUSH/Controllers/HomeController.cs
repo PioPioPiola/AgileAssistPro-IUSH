@@ -12,12 +12,25 @@ namespace AgileAssistPro_IUSH.Controllers
         {
             _logger = logger;
         }
-        //Aquí creamos un parámetro logger de la interfaz Ilogger del paquete de entity.
 
         public IActionResult Index()
         {
             return View();
         }
+
+        public IActionResult Usuarios()
+        {
+            return View();
+        }
+        public IActionResult Qr()
+        {
+            return View();
+        }
+        public IActionResult Asistencia()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

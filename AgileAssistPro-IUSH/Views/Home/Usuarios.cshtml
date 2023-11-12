@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="display:flex;justify-content: space-between;align-items: center; color:#294E7F">
+    
+    <h1>@ViewData["Title"]</h1>
+
+   <a asp-action=" " class="btn btn-secondary">Crear @ViewData["Title"]</a> <!--ESTA LÍNEA ES LA ACCIÓN DEL BOTÓN. Como aún no he creado la lógica de crear, no habilito acción-->
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identificación</th>
+                <th>Correo</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <!--Aquí relacionaré que a cada celda se agregue los datos del modelo de datos-->
+            <tr>
+                <td>Item Identificación</td>
+                <td>Item Correo</td>
+                <td>Item Nombre</td>
+                <td>
+                    <a class="btn btn-sm btn-info">Editar</a>
+                    <a class="btn btn.sm btn-info">Detalle</a>
+                    <a class="btn btn-sm btn-info">Borrar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

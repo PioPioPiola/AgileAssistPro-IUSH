@@ -1,6 +1,13 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Qr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>@ViewData["Title"]</h1>
+<div style="display:flex;justify-content: space-between;align-items: center; color:#294E7F">
 
-<p>En este espacio irá la generación del Qr.</p>
+    <h1>@ViewData["Title"]</h1>
+
+</div>
+<div style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; align-content:center">
+    <img src ="~/Img/AgileAssistPro-Qr.png" alt="Imagen del Qr" />
+</div>

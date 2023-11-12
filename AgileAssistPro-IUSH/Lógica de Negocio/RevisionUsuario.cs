@@ -1,11 +1,11 @@
 ﻿
-using AgileAssistPro_IUSH.Models;
+
+    /*using AgileAssistPro_IUSH.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace AgileAssistPro_IUSH.Controllers
-{
-    public class RevisionUsuario
+{public class RevisionUsuario
     {
         private readonly AgileAssistProIushContext _Context;
         public RevisionUsuario (AgileAssistProIushContext context)
@@ -36,4 +36,4 @@ namespace AgileAssistPro_IUSH.Controllers
             }
         }
     }
-}
+}*/

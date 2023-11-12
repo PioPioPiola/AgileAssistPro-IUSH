@@ -11,7 +11,6 @@ builder.Services.AddDbContext<AgileAssistProIushContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 //Para 
-builder.Services.AddScoped<RevisionUsuario>();
 
 var app = builder.Build();
 
@@ -31,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=LoginPartial}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

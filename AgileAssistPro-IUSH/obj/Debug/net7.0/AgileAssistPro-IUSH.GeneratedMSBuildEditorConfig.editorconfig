@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Usuario\Desktop\AgileAssistPro-IUSH\AgileAssistPro-IUSH
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Home/Asistencia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBc2lzdGVuY2lhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,8 +28,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/LoginPartial/LoginIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYXJ0aWFsXExvZ2luSW5kZXguY3NodG1s
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Home/Usuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc3Vhcmlvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Shared/Error.cshtml]
@@ -34,10 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/UsuariosCRUD/UsuariosIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NDUlVEXFVzdWFyaW9zSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/_ViewImports.cshtml]
