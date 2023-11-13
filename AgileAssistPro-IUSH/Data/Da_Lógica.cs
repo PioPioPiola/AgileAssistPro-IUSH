@@ -15,7 +15,7 @@ namespace AgileAssistPro_IUSH.Data
         {
             return await _context.Usuarios.ToListAsync();
         }
-
+        
         public async Task<Usuarios> ValidarUsuario(string CorreoIngreso, int Contraseña)
         {
             return await _context.Usuarios

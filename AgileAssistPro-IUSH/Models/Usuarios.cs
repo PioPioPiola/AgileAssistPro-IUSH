@@ -14,5 +14,4 @@ public partial class Usuarios
     public string Correo { get; set; } = null!;
     public string IdCurso { get; set; } = null!;
     public string Hora { get; set; } = null!;
-    //Importante hacer estos cambio en la Base de datos y eliminar la tabla cursos, cambiarla por asistencias.
 }

@@ -44,6 +44,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/UsuariosCRUD/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NDUlVEXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/UsuariosCRUD/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NDUlVEXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/UsuariosCRUD/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NDUlVEXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/UsuariosCRUD/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NDUlVEXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/UsuariosCRUD/UsersCRUD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NDUlVEXFVzZXJzQ1JVRC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Desktop/AgileAssistPro-IUSH/AgileAssistPro-IUSH/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

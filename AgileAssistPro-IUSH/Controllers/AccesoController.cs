@@ -33,8 +33,11 @@ namespace AgileAssistPro_IUSH.Controllers
                 {
                     new Claim(ClaimTypes.Name, LoginUser.Nombre),
                     new Claim("Correo", LoginUser.Correo),
-                    new Claim(ClaimTypes.Role, LoginUser.Rol)
-                };
+            };
+                if (!string.IsNullOrEmpty(LoginUser.Rol))
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, LoginUser.Rol));
+                }
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 

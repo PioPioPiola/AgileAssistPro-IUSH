@@ -20,13 +20,12 @@ namespace AgileAssistPro_IUSH.Controllers
             return View();
         }
 
-        [Authorize(Roles ="Admin")]
         public IActionResult Usuarios()
         {
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+       // [Authorize(Roles = "Admin")]
         public IActionResult Qr()
         {
             return View();

@@ -1,4 +1,4 @@
-﻿/* System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AgileAssistPro_IUSH.Models;
 using Microsoft.AspNetCore.Mvc;
+using AgileAssistPro_IUSH.Data;
 
 namespace AgileAssistPro_IUSH.Controllers
 {
@@ -17,11 +18,12 @@ namespace AgileAssistPro_IUSH.Controllers
         {
             _context = context;
         }
-        public async Task <IActionResult> UsuariosIndex()
+        public async Task <IActionResult> UsersCRUD()
         {
             return _context.Usuarios != null ?
                 View(await _context.Usuarios.ToListAsync()) : Problem("Entity set 'AgileAssistProIushContext.Usuarios' is null.");
         }
+                                      
 
         //Details
         public async Task<IActionResult> Details(int? id)
@@ -48,7 +50,7 @@ namespace AgileAssistPro_IUSH.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Rol,Nombre,Correo,IdCurso")] Usuarios usuarioRegistrado)
+        public async Task<IActionResult> Create([Bind("Id,Rol,Nombre,Correo,IdCurso,Hora")] Usuarios usuarioRegistrado)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +77,7 @@ namespace AgileAssistPro_IUSH.Controllers
         //Post Editar usuarios
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Rol,Nombre,Correo,IdCurso")] Usuarios usuarioRegistrado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Rol,Nombre,Correo,IdCurso, Hora")] Usuarios usuarioRegistrado)
         {
             if (id!=usuarioRegistrado.Id)
             {
@@ -144,4 +146,3 @@ namespace AgileAssistPro_IUSH.Controllers
 
     }
 }
-*/

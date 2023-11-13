@@ -8,7 +8,7 @@ public partial class Cursos
 {
     public int IdCurso { get; set; }
 
-    public string? Nombre { get; set; }
+    public string Nombre { get; set; }
 
-    public string? Docente { get; set; }
+    public string Docente { get; set; }
 }
