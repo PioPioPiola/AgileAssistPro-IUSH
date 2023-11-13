@@ -77,7 +77,7 @@ namespace AgileAssistPro_IUSH.Controllers
         //Post Editar usuarios
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Rol,Nombre,Correo,IdCurso, Hora")] Usuarios usuarioRegistrado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Rol,Nombre,Correo,IdCurso,Hora")] Usuarios usuarioRegistrado)
         {
             if (id!=usuarioRegistrado.Id)
             {
