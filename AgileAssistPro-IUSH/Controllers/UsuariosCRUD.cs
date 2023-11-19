@@ -57,7 +57,8 @@ namespace AgileAssistPro_IUSH.Controllers
                 _context.Add(usuarioRegistrado);
                 await _context.SaveChangesAsync();
             }
-            return View(usuarioRegistrado);
+            TempData["Mensaje"] = "Usuario creado";
+            return RedirectToAction(nameof(UsersCRUD));
         }
 
         //Opción Editar Usuarios. GET
@@ -77,7 +78,7 @@ namespace AgileAssistPro_IUSH.Controllers
         //Post Editar usuarios
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Rol,Nombre,Correo,IdCurso,Hora")] Usuarios usuarioRegistrado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Correo")] Usuarios usuarioRegistrado)
         {
             if (id!=usuarioRegistrado.Id)
             {
@@ -101,7 +102,8 @@ namespace AgileAssistPro_IUSH.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                TempData["Mensaje"] = "Modificación exitosa";
+                return RedirectToAction(nameof(UsersCRUD));
             }
             return View(usuarioRegistrado);
         }
@@ -125,7 +127,7 @@ namespace AgileAssistPro_IUSH.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> DeleteConfirmed (string id)
+        public async Task<IActionResult> DeleteConfirmed (int id)
         {
             if (_context.Usuarios == null)
             {
@@ -137,7 +139,8 @@ namespace AgileAssistPro_IUSH.Controllers
                 _context.Usuarios.Remove(usuarioRegistrado);
             }
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            TempData["Mensaje"] = "Usuario eliminado";
+            return RedirectToAction(nameof(UsersCRUD));
         }
         private bool UsuarioExists (int id)
         {

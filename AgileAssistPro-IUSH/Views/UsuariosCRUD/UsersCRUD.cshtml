@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<AgileAssistPro_IUSH.Models.Usuarios>
+@using AgileAssistPro_IUSH.Controllers;
 
 @{
     ViewData["Title"] = "Usuarios";
@@ -51,9 +52,22 @@
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Editar</a>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detalle</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-info">Borrar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-info">Eliminar</a>
                 </td>
             </tr>
         }
+        
     </tbody>
 </table>
+        @if (TempData["Mensaje"] != null)
+        {
+            <div class="alert alert-success"style="padding:10px">
+                @TempData["Mensaje"]
+            <script>
+                window.setTimeout(function () 
+                {
+                $(".alert").fadeTo(500, 0).slideUp(500, function () {$(this).remove();});
+                 }, 2000); 
+            </script>
+            </div>
+        }

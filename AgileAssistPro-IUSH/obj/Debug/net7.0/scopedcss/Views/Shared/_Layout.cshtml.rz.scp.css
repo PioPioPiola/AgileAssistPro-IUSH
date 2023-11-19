@@ -44,3 +44,12 @@ button.accept-policy[b-ee5ce0f0yz] {
   white-space: nowrap;
   line-height: 60px;
 }
+.custom-close[b-ee5ce0f0yz] {
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 1rem; 
+}
+.custom-close span[b-ee5ce0f0yz] {
+    font-size: 1rem; 
+    }

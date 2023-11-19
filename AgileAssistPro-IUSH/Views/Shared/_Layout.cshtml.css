@@ -44,3 +44,12 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+.custom-close {
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 1rem; 
+}
+.custom-close span {
+    font-size: 1rem; 
+    }

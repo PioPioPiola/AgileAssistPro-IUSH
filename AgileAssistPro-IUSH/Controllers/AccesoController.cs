@@ -31,8 +31,8 @@ namespace AgileAssistPro_IUSH.Controllers
             {//Creación cookie de autorización
                   var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, LoginUser.Nombre),
-                    new Claim("Correo", LoginUser.Correo),
+                    new Claim(ClaimTypes.Name, LoginUser.Correo),
+                    new Claim("Nombre", LoginUser.Nombre),
             };
                 if (!string.IsNullOrEmpty(LoginUser.Rol))
                 {

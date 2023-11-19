@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<AgileAssistPro_IUSH.Models.Usuarios>
-
+@using AgileAssistPro_IUSH.Controllers;
+@using AgileAssistPro_IUSH.Data;
+@using Microsoft.AspNetCore.Authentication.Cookies;
+@using Microsoft.AspNetCore.Authentication;
 @{
     ViewData["Title"] = "Monitoreo";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -16,7 +19,7 @@
                 <th>Clase del día</th>
                 <th>Hora</th>
                 <th>Registrar Asistencia</th>
-                @if(User.IsInRole("Administra"))
+                @if(!User.IsInRole("Estudiante"))
                 {
                 <th>Alumno</th>
                 <th>Faltas</th>
@@ -26,33 +29,31 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    @if(item.Rol=="Estudiante")
-                    {
-                        <td>@item.IdCurso</td>
-                        <td>@item.Hora</td>
-                        @if (User.IsInRole("Estudiante"))
+                @if (item.Rol == "Estudiante")
+                {
+                    <tr>
+
+                        @if (User.IsInRole("Estudiante") && (User.Identity.Name == item.Correo))
                         {
+
+                            <td>@item.IdCurso</td>
+                            <td>@item.Hora</td>
                             <td>
                                 <a class="btn btn-sm btn-info">¡Presente!</a>
                             </td>
                         }
-                        else
+                        else if (!User.IsInRole("Estudiante"))
                         {
+                            <td>@item.IdCurso</td>
+                            <td>@item.Hora</td>
                             <td>
                                 <a class="btn btn-sm btn-info">Asistió</a>
                             </td>
-                        }
-
-                        @if (User.IsInRole("Administra"))
-                        {
                             <td>@item.Nombre</td>
+                            <td>@item.Inasistencia</td>
                         }
-                    }
-                    <td>
-                        <!-- Lógica para mostrar faltas o ícono de advertencia. Crear clase de cálculo de inasistencia. -->
-                    </td>
-                </tr>
+                    </tr>
+                }
             }
         </tbody>
     </table>
