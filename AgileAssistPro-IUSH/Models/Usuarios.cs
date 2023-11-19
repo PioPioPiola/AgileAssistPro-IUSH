@@ -14,4 +14,6 @@ public partial class Usuarios
     public string Correo { get; set; } = null!;
     public string IdCurso { get; set; } = null!;
     public string Hora { get; set; } = null!;
+    public int Asistencia { get; set; }
+    public int Inasistencia { get; set; }
 }

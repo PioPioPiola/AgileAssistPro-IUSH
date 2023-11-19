@@ -16,30 +16,16 @@ public partial class AgileAssistProIushContext : DbContext
     {
     }
 
-    public virtual DbSet<Cursos> Cursos { get; set; }
-
     public virtual DbSet<Usuarios> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Cursos>(entity =>
-        {
-            entity.HasKey(e => e.IdCurso).HasName("PK__Cursos__085F27D686520ACB");
-
-            entity.Property(e => e.IdCurso).ValueGeneratedNever();
-            entity.Property(e => e.Docente)
-                .HasMaxLength(20)
-                .IsUnicode(false);
-            entity.Property(e => e.Nombre)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-        });
-
+        
         modelBuilder.Entity<Usuarios>(entity =>
         {
-            entity.HasKey(e => e.Rol);
+            entity.HasKey(e => e.Id);
 
             entity.Property(e => e.Rol)
                 .HasMaxLength(10)

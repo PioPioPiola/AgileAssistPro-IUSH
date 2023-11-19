@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AgileAssistPro_IUSH.Models.Usuarios>
+
+@{
+    ViewData["Title"] = "Monitoreo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="display:flex;justify-content: space-between;align-items: center; color:#294E7F">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr> 
+                <th>Clase del día</th>
+                <th>Hora</th>
+                <th>Registrar Asistencia</th>
+                @if(User.IsInRole("Administra"))
+                {
+                <th>Alumno</th>
+                <th>Faltas</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @if(item.Rol=="Estudiante")
+                    {
+                        <td>@item.IdCurso</td>
+                        <td>@item.Hora</td>
+                        @if (User.IsInRole("Estudiante"))
+                        {
+                            <td>
+                                <a class="btn btn-sm btn-info">¡Presente!</a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                <a class="btn btn-sm btn-info">Asistió</a>
+                            </td>
+                        }
+
+                        @if (User.IsInRole("Administra"))
+                        {
+                            <td>@item.Nombre</td>
+                        }
+                    }
+                    <td>
+                        <!-- Lógica para mostrar faltas o ícono de advertencia. Crear clase de cálculo de inasistencia. -->
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
