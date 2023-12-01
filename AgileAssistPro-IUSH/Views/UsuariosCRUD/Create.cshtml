@@ -9,7 +9,7 @@
 <h4>Usuario</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="display:flex; align-items:flex-start">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -29,20 +29,34 @@
             </div>
             <div class="form-group">
                 <label asp-for="Rol" class="control-label"></label>
-                <input asp-for="Rol" class="form-control" />
+                <select asp-for="Rol" class="form-control">
+                    <option value="">Selecciona un Rol</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Docente">Docente</option>
+                </select>
                 <span asp-validation-for="Rol" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdCurso" class="control-label"></label>
-                <input asp-for="IdCurso" class="form-control" />
+                <label asp-for="IdCurso" class="control-label">Curso</label>
+                <select asp-for="IdCurso" class="form-control">
+                    <option value="">Selecciona un Curso</option>
+                    <option value="Matemáticas Operativas">Matemáticas Operativas</option>
+                    <option value="Inglés">Inglés</option>
+                    <option value="Cristología">Cristología</option>
+                </select>
                 <span asp-validation-for="IdCurso" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Hora" class="control-label"></label>
-                <input asp-for="Hora" class="form-control" />
-                <span asp-validation-for="Hora" class="text-danger"></span>
+                <label asp-for="HoraInicio" class="control-label">Hora Inicio</label>
+                <input asp-for="HoraInicio" type="time"class="form-control" />
+                <span asp-validation-for="HoraInicio" class="text-danger"></span>
             </div>
-            <div class="form-group"style="padding-top:10px">
+            <div class="form-group">
+                <label asp-for="HoraFin" class="control-label">Hora Fin</label>
+                <input asp-for="HoraFin" type="time" class="form-control" />
+                <span asp-validation-for="HoraFin" class="text-danger"></span>
+            </div>
+            <div class="form-group"style="padding-top:13px">
                 <input type="submit" value="Crear" class="btn btn-primary" /> | <a asp-controller="UsuariosCRUD" asp-action="UsersCRUD">Volver</a>
             </div>
         </form>

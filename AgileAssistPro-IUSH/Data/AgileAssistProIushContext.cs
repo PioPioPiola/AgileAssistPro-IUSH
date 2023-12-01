@@ -39,6 +39,11 @@ public partial class AgileAssistProIushContext : DbContext
             entity.Property(e => e.Nombre)
                 .HasMaxLength(50)
                 .IsFixedLength();
+            entity.Property(e => e.Asistencia);
+            entity.Property(e => e.Inasistencia);
+            entity.Property(e => e.HoraInicio);
+            entity.Property(e => e.HoraFin);
+
         });
 
         OnModelCreatingPartial(modelBuilder);

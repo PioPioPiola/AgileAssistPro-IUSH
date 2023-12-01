@@ -50,7 +50,7 @@ namespace AgileAssistPro_IUSH.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Rol,Nombre,Correo,IdCurso,Hora")] Usuarios usuarioRegistrado)
+        public async Task<IActionResult> Create([Bind("Id,Rol,Nombre,Correo,IdCurso,HoraInicio,HoraFin")] Usuarios usuarioRegistrado)
         {
             if (ModelState.IsValid)
             {

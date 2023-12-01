@@ -1,7 +1,28 @@
-﻿@{
+﻿@model IEnumerable<AgileAssistPro_IUSH.Models.Usuarios>
+@{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="alert alert-success">¡Bienvenido!</h1>
+
+    <h1 style="color:#294E7F;padding:20px">¡Bienvenido!</h1>
+    <h2>¿Cómo funciona AgileAssitPro?</h2>
 </div>
+<div style="display: flex; justify-content: center; align-items: center;padding:20px" class="Intro-content">
+    <div style="text-align: center; margin: 10px;padding:20px 2px 10px 2px">
+        <img src="/Img/Login.png" alt="Login" style="width:40%;height:40%" />
+        <p style="font-weight:600;color:#294E7F">Inicia Sesión</p>
+    </div>
+    <div style="text-align: center; margin: 10px;padding:20px 2px 10px 2px">
+        <img src="/Img/check.png" alt="Marcar" style="width:40%;height:40%" />
+        <p style="font-weight:600;color:#294E7F">Marca tu asistencia</p>
+    </div>
+    <div style="text-align: center; margin: 10px;padding:20px 2px 10px 2px">
+        <img src="/Img/logout.png" alt="Salir" style="width:40%;height:40%" />
+        <p style="font-weight:600;color:#294E7F">Cierra Sesión</p>
+</div>
+@section BodyClass {
+    <script>
+        document.body.classList.add("clase-vista-acceso");
+    </script>
+}

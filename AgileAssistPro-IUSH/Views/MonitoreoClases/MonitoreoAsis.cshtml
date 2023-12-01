@@ -1,28 +1,27 @@
 ﻿@model IEnumerable<AgileAssistPro_IUSH.Models.Usuarios>
-@using AgileAssistPro_IUSH.Controllers;
-@using AgileAssistPro_IUSH.Data;
-@using Microsoft.AspNetCore.Authentication.Cookies;
-@using Microsoft.AspNetCore.Authentication;
 @{
     ViewData["Title"] = "Monitoreo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div style="display:flex;justify-content: space-between;align-items: center; color:#294E7F">
+<div style="display:flex; justify-content: space-between; align-items: center; color:#294E7F">
     <h1>@ViewData["Title"]</h1>
 </div>
 
 <div>
     <table class="table">
         <thead>
-            <tr> 
+            <tr>
                 <th>Clase del día</th>
-                <th>Hora</th>
-                <th>Registrar Asistencia</th>
-                @if(!User.IsInRole("Estudiante"))
+                <th>Hora Inicio</th>
+                <th>Hora Fin</th>
+                <th>Asistencia</th>
+                <th>Inasistencia</th>
+                @if (!User.IsInRole("Estudiante"))
                 {
-                <th>Alumno</th>
-                <th>Faltas</th>
+                    <th>Alumno</th>
+                    <th>Faltas</th>
+                    <th>Asistencia</th>
                 }
             </tr>
         </thead>
@@ -37,20 +36,26 @@
                         {
 
                             <td>@item.IdCurso</td>
-                            <td>@item.Hora</td>
+                            <td>@item.HoraInicio</td>
+                            <td>@item.HoraFin</td>
                             <td>
-                                <a class="btn btn-sm btn-info">¡Presente!</a>
+                                <button class="btn btn-sm btn-info presente-btn" data-id="@item.Id">¡Presente!</button>
                             </td>
                         }
                         else if (!User.IsInRole("Estudiante"))
                         {
                             <td>@item.IdCurso</td>
-                            <td>@item.Hora</td>
+                            <td>@item.HoraInicio</td>
+                            <td>@item.HoraFin</td>
                             <td>
-                                <a class="btn btn-sm btn-info">Asistió</a>
+                                <button class="btn btn-sm btn-info presente-btn" data-id="@item.Id">Asistió</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-info falta-btn" data-id="@item.Id">Faltó</button>
                             </td>
                             <td>@item.Nombre</td>
                             <td>@item.Inasistencia</td>
+                            <td>@item.Asistencia</td>
                         }
                     </tr>
                 }
@@ -58,3 +63,122 @@
         </tbody>
     </table>
 </div>
+
+<!-- Modal de Confirmación -->
+@if (User.IsInRole("Estudiante"))
+{
+    <div class="modal fade" id="confirmarAsistenciaModal" tabindex="-1" aria-labelledby="confirmarAsistenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmarAsistenciaModalLabel">Registrar Asistencia</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Deseas marcar asistencia?
+                    <form id="formAsistencia" method="post" action="/MonitoreoClases/MarcarAsistencia">
+                        <input type="hidden" name="EstudianteId" id="estudianteId" value="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" ;">No</button>
+                    <button type="button" class="btn btn-primary" onclick="$('#formAsistencia').submit();">Sí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="modal fade" id="confirmarAsistenciaModal" tabindex="-1" aria-labelledby="confirmarAsistenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmarAsistenciaModalLabel">Registrar Asistencia</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Deseas marcar asistencia para este estudiante?
+                    <form id="formAsistencia" method="post" action="/MonitoreoClases/MarcarAsistencia">
+                        <input type="hidden" name="EstudianteId" id="estudianteId" value="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" onclick="$('#formAsistencia').submit();">Sí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmarFaltaModal" tabindex="-1" aria-labelledby="confirmarFaltaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmarFaltaModalLabel">Registrar Falta</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Deseas marcar falta para este estudiante?
+                    <form id="formFalta" method="post" action="/MonitoreoClases/ConteoFaltas">
+                        <input type="hidden" name="EstudianteId" id="estudianteIdFalta" value="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" onclick="$('#formFalta').submit();">Sí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.presente-btn').click(function () {
+                var estudianteId = $(this).data('id');
+                $('#confirmarAsistenciaModal').modal('show');
+                $('#estudianteId').val(estudianteId);
+            });
+
+            $('.falta-btn').click(function () {
+                var estudianteId = $(this).data('id');
+                $('#confirmarFaltaModal').modal('show');
+                $('#estudianteIdFalta').val(estudianteId);
+            });
+        });
+    </script>
+}
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-danger" style="padding:10px">
+            @TempData["Mensaje"]
+            <script>
+                window.setTimeout(function () {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function () { $(this).remove(); });
+                }, 3000);
+            </script>
+        </div>
+    }
+@if (TempData["MensajeExito"] != null)
+{
+    <div class="alert alert-success" style="padding:10px">
+        @TempData["MensajeExito"]
+        <script>
+            window.setTimeout(function () {
+                $(".alert").fadeTo(500, 0).slideUp(500, function () { $(this).remove(); });
+            }, 3000);
+        </script>
+    </div>
+}
+
+
+

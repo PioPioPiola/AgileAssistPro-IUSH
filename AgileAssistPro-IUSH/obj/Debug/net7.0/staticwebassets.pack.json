@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\Img\\AgileAssistPro-Qr.png"
     },
     {
+      "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\EstudiantesLogin.jpg",
+      "PackagePath": "staticwebassets\\Img\\EstudiantesLogin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\Login.png",
+      "PackagePath": "staticwebassets\\Img\\Login.png"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\Logo.png",
       "PackagePath": "staticwebassets\\Img\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\check.png",
+      "PackagePath": "staticwebassets\\Img\\check.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\logout.png",
+      "PackagePath": "staticwebassets\\Img\\logout.png"
     },
     {
       "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\css\\site.css",
