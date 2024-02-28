@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\AgileAssistPro-IUSH.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\AgileAssistPro - Nube.png",
+      "PackagePath": "staticwebassets\\Img\\AgileAssistPro - Nube.png"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\AgileAssistPro-Qr.png",
       "PackagePath": "staticwebassets\\Img\\AgileAssistPro-Qr.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\AgileAssistProQrNube.png",
+      "PackagePath": "staticwebassets\\Img\\AgileAssistProQrNube.png"
     },
     {
       "Id": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\EstudiantesLogin.jpg",

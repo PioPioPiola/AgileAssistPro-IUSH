@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uQexMMIMCKy7tsohpBPUSnZwRhKDg9VA8lYmYpHlt38=",
+  "Hash": "gK924Pq3TCUAEZV3WmEiF4n1LBltm3K3m39Ae9+lTdo=",
   "Source": "AgileAssistPro-IUSH",
   "BasePath": "_content/AgileAssistPro-IUSH",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\AgileAssistPro - Nube.png",
+      "SourceId": "AgileAssistPro-IUSH",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\",
+      "BasePath": "_content/AgileAssistPro-IUSH",
+      "RelativePath": "Img/AgileAssistPro - Nube.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\AgileAssistPro - Nube.png"
+    },
+    {
       "Identity": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\AgileAssistPro-Qr.png",
       "SourceId": "AgileAssistPro-IUSH",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\AgileAssistPro-Qr.png"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\AgileAssistProQrNube.png",
+      "SourceId": "AgileAssistPro-IUSH",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\",
+      "BasePath": "_content/AgileAssistPro-IUSH",
+      "RelativePath": "Img/AgileAssistProQrNube.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\AgileAssistProQrNube.png"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\AgileAssistPro-IUSH\\AgileAssistPro-IUSH\\wwwroot\\Img\\check.png",

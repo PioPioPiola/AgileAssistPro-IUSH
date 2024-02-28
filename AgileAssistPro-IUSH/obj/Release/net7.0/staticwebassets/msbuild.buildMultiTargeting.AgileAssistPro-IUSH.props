@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AgileAssistPro-IUSH.props" />
+</Project>
